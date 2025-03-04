@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="authot" content="Joaquin Galdame">
+  <meta name="description" content="Portafolio de desarrollo de Joaquin Galdame">
+  <meta name="keywords" content="HTML, CSS, JavaSCript y React">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Titulo -->
+   <title>Joaquín Galdame | Portfolio</title>
+   <!-- Favicon -->
+   <!-- <link rel="icon" type="image/x-icon" href="imagenes/jg-icon-48x48.png"> -->
+   <!-- Boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   <!-- Iconos de Bootstrap -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <!-- CSS -->
+   <link href="styles.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+<body class="page">
+  <nav class="nav-main">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="experency-tab" data-bs-toggle="tab" data-bs-target="#experency-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Experiencia</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aboutme-tab" data-bs-toggle="tab" data-bs-target="#aboutme-tab-pane" type="button" role="tab" aria-controls="aboutme-tab-pane" aria-selected="false">Sobre Mí</button>
+      </li>
+      <!-- <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contacto</button>
+      </li> -->
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <!-- Sector Home -->
+         <section class="home-page seccion-clara d-flex flex-column justify-content-center align-items-center">
+          <div class="hero-principal">
+            <img src="imagenes/desarrollador-ejemplo.svg" alt="Foto de Desarrollador" class="hero-imagen-desarrollador rounded-circle">
+            <h1 class="border-w">Joaquín Galdame</h1>
+            <h2 class="cuerpo-cabecera">Técnico Universitario en Programación</h2>
+            <h2>Desarrollador Web Full Stack</h2>
+          </div>
+          <div class="container-viewJobs">
+            <button id="btnViewJobs" class="btn-viewJobs"><i class="bi bi-code-slash"> Ver mis trabajos</i></button>
+          </div>
+          <div class="container-viewAboutMe">
+            <button id="btnviewAboutMe" class="btn-viewAboutMe"><i class="bi bi-person-plus-fill"> Más sobre mí</i></button>
+          </div>
+          <div class="hero-medio">
+            <img class="hero-medio-imagen img-fluid" src="imagenes/hero-inferior.svg" alt="Monitor, Laptop y logos HTML, CSS, JavaScript y React." >
+          </div>
+          <div class="seccion-oscura hero-inferior">
+            <div class="contenedor">
+              <h1 class="seccion-titulo">¡Bienvenido!</h1>
+              <p class="seccion-texto">Este es mi Portfolio que estoy encantado de presentarles. Acá podrás ver todo mi trabajo realizado y la experiencia que he conseguido a lo largo de mis años como programador y desarrollador web. Me recibí de <i>Técnico Universitario en Programación</i> en la Universidad Nacional de San Juan. Actualmente soy estudiante avanzado de la carrera Licenciatura en Ciencias de Computación y trabajo como Desarrollador Web Fullstack con experiencia en .Net, Angular, JavaSCript, SQL Server y MongoDB en <strong>SoftSystem Soluciones para Gestión de Negocios</strong>. Además de tengo conocimientos Java, Python, Node.js, MySQL, PostgreSQL.</p>
+            </div>
+          </div>
+         </section>
+      </div>
+      <div class="tab-pane fade experency-page" id="experency-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <!-- Sector Experiencia -->
+          <div id="fullscreenOverlay" class="overlayIMG" onclick="closeFullscreen()">
+            <img id="fullscreenImage" src="" class="fullscreen-img" alt="Fullscreen">
+          </div>
+          <!-- Modal Información -->
+          <div class="modal fade modal-xl" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="projectModalLabel">Más detalles del proyecto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="cerrarModal()"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Contenido dinámico -->
+                  <!-- <img id="modalProjectImage" src="" alt="Imagen del proyecto" class="img-fluid mb-3"> -->
+                  <div class="text-modal-container">
+                    <!-- <p id="modalProjectDescription"></p> -->
+                    <div id="modalProjectDescription"></div>
+                  </div>
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="2000">
+                        <img id="img-carousel-1" src="" class="d-block w-100 zoom-image" alt="">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="img-carousel-2" src="" class="d-block w-100 zoom-image" alt="">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="img-carousel-3" src="" class="d-block w-100 zoom-image" alt="">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="img-carousel-4" src="" class="d-block w-100 zoom-image" alt="">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="img-carousel-5" src="" class="d-block w-100 zoom-image" alt="">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="img-carousel-6" src="" class="d-block w-100 zoom-image" alt="">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="line-container">
+                    <p class="line-modal"></p>
+                  </div>
+                  <div class="btns-modal-container">
+                    Tecnologies
+                    <span id="badge-1" class="badge text-bg-info hidden-modal"></span>
+                    <span id="badge-2" class="badge text-bg-info hidden-modal"></span>
+                    <span id="badge-3" class="badge text-bg-info hidden-modal"></span>
+                    <span id="badge-4" class="badge text-bg-info hidden-modal"></span>
+                    <span id="badge-5" class="badge text-bg-info hidden-modal"></span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <!-- <a id="modalGithubLink" href="#" target="_blank" class="btn btn-dark">Ver en GitHub</a> -->
+                  <!-- <a id="modalLiveDemoLink" href="#" target="_blank" class="btn btn-primary">Ver Demo</a> -->
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Experiencia -->
+          <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+            <h2 class="seccion-titulo texto-negro">Trabajos</h2>
+            <h3 class="seccion-descripcion">Estos son algunos de los trabajos que he realizado...</h3>
+            <!-- Galeria de Proyectos -->
+            <div class="container text-center proyectos-contenedor">
+              <div class="row">
+                <!-- Proyecto 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto efect-project">
+                  <img src="imagenes/Proyectos/Proyecto-1.jpg" alt="Sistema E-commerce">
+                  <div class="overlay">
+                      <p>E-commerce</p>
+                      <div class="iconos-contenedor">
+                          <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#projectModal"
+                            data-id="1" 
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="top"
+                            title="Más información sobre este proyecto">
+                            <i class="bi bi-info-circle"></i>
+                          </a>
+                            <a href="https://github.com/JoaquinGaldame/Project-Ecommerce" target="_blank" rel="noopener noreferrer" title="Ver Código">
+                            <i class="bi bi-laptop"></i>
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="proyecto efect-project">
+                    <img src="imagenes/Proyectos/Proyecto-2.jpg" alt="Sistema TPV">
+                    <div class="overlay">
+                        <p>Terminal de Punto de Venta</p>
+                        <div class="iconos-contenedor">
+                            <a href="#" data-bs-toggle="modal" 
+                              data-bs-target="#projectModal"
+                              data-id="2" 
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top"
+                              title="Más información sobre este proyecto">
+                              <i class="bi bi-info-circle"></i>
+                            </a>
+                              <a title="No disponible por el momento.">
+                              <i class="bi bi-laptop"></i>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="proyecto efect-project">
+                    <img src="imagenes/Proyectos/Proyecto-3.jpg" alt="Management Monitoring">
+                    <div class="overlay">
+                        <p>Sistema de Monitoreo de Gestión</p>
+                        <div class="iconos-contenedor">
+                            <a href="#" data-bs-toggle="modal" 
+                              data-bs-target="#projectModal"
+                              data-id="3" 
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top"
+                              title="Más información sobre este proyecto">
+                              <i class="bi bi-info-circle"></i>
+                            </a>
+                            <a title="No disponible por el momento." >
+                              <i class="bi bi-laptop"></i>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Proyecto 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="proyecto efect-project">
+                    <img  src="imagenes/Proyectos/Proyecto-4.jpg" alt="Sistema ERP">
+                    <div class="overlay">
+                        <p>Soluciones ERP</p>
+                        <div class="iconos-contenedor">
+                            <a href="#" data-bs-toggle="modal" 
+                              data-bs-target="#projectModal"
+                              data-id="4" 
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top"
+                              title="Más información sobre este proyecto">
+                              <i class="bi bi-info-circle"></i>
+                            </a>
+                            <a title="No disponible por el momento." >
+                              <i class="bi bi-laptop"></i>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Proyecto 5 -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                  <div class="proyecto">
+                    <img src="imagenes/Proyectos/Proyecto-1.jpg" alt="Proyecto 5">
+                    <div class="overlay">
+                      <p>Proyecto 5</p>
+                      <div class="iconos-contenedor">
+                          <a href="https://github.com/JoaquinGaldame?tab=repositories" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github"></i>
+                          </a>
+                          <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" >
+                            <i class="bi bi-laptop"></i>
+                          </a>
+                      </div>
+                      </div>
+                    </div>
+                </div> -->
+                <!-- Proyecto 6 -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                  <div class="proyecto">
+                    <img src="imagenes/proyecto6.png" alt="Proyecto 6">
+                    <div class="overlay">
+                      <p>Proyecto 6</p>
+                      <div class="iconos-contenedor">
+                          <a href="https://github.com/JoaquinGaldame?tab=repositories" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github"></i>
+                          </a>
+                          <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" >
+                            <i class="bi bi-laptop"></i>
+                          </a>
+                      </div>
+                      </div>
+                    </div>
+                </div> -->
+              </div>
+            </div>
+            <a href="https://github.com/JoaquinGaldame?tab=repositories" target="_blank" rel="noopener noreferrer" >
+            <button type="button" class="btn btn-info">
+              Ver más proyectos
+              <i class="bi bi-arrow-right-circle-fill"></i>
+            </button>
+            </a>
+          </section> 
+      </div>
+      <div class="tab-pane fade aboutme-page" id="aboutme-tab-pane" role="tabpanel" aria-labelledby="aboutme-tab" tabindex="0">
+        <!-- Sector Sobre Mí -->
+         <!-- Experiencia-tecnica -->
+          <section id="experiencia" class="experiencia seccion-clara">
+            <div class="container text-center">
+              <div class="row">
+                <!-- Estudiante -->
+                <div class="columna col-12 col-md-4">
+                  <i class="bi bi-book"></i>
+                  <p class="experiencia-titulo">Técnico Universitario en Programación</p>
+                  <p>Egresado de la Facultad de Ciencias Exactas,Físicas y Naturales de la Univerdad Nacional de San Juan. Título Intermedio con el Objetivo de adquirir sólida formación en Lenguajes y principios de Programación y una visión general del funcionamiento de equipamiento computacional y desarrollo de software.</p>
+                  <p>Poseer amplios conocimientos en estrategias de programación, en diferentes paradigmas de lenguajes y tecnologías, implementación de algoritmos. Conocimientos en Sistemas Operativos, Estructuras de Computadoras y Redes, en desarrolló de software, Base de Datos y Sistemas de Información.</p>
+                  <div class="badges-contenedor">
+                    <span class="badge text-bg-secondary">C</span>
+                    <span class="badge text-bg-secondary">C#</span>
+                    <span class="badge text-bg-secondary">Relational Database</span>
+                    <span class="badge text-bg-secondary">PostgreSQL</span>
+                    <span class="badge text-bg-secondary">Language Paradigms</span>
+                    <span class="badge text-bg-secondary">Software Engineer</span>
+                    <span class="badge text-bg-secondary">Redes</span>
+                  </div>
+                </div>
+                <!-- Desarrollo web -->
+                <div class="columna col-12 col-md-4">
+                  <i class="bi bi-laptop"></i>
+                  <p class="experiencia-titulo">Desarrollador Web Full Stack</p>
+                  <p>Desarrollé y optimicé sistemas de clientes en la estructuración de reportes y visualizaciones, e integraciones de nuevos módulos funcionales. Entre los proyectos gestionados se incluyen sistema TPV (Terminales Punto de Venta), plataforma de Monitoreo de Gestión, sistema web e-commerce y sistemas de soluciones ERP.</p>
+                  <p>Diseñé y optimicé páginas web para mejorar la usabilidad y estética visual en sistemas con actual uso de clientes, utilizando las tecnologías claves de la industria como JavaScript, HTML, CSS. Experiencia en el desarrollo de proyectos con Tailwind CSS y Angular, incluyendo versiones 13 y 17.</p>
+                  <div class="badges-contenedor">
+                    <span class="badge text-bg-secondary">HTML</span>
+                    <span class="badge text-bg-secondary">CSS</span>
+                    <span class="badge text-bg-secondary">JavaScript</span>
+                    <span class="badge text-bg-secondary">Angular</span>
+                    <span class="badge text-bg-secondary">Vue3</span>
+                    <span class="badge text-bg-secondary">Bootstrap 5</span>
+                    <span class="badge text-bg-secondary">Tailwind CSS</span>
+                    <span class="badge text-bg-secondary">AWS</span>
+                    <span class="badge text-bg-secondary">SQL Server</span>
+                    <span class="badge text-bg-secondary">MongoDB</span>
+                  </div>
+                </div>
+                <!-- Articulos -->
+                <div class="columna col-12 col-md-4 container-aboutme">
+                  <i class="bi bi-file-person-fill"></i>
+                  <p class="experiencia-titulo">Licenciatura en Ciencias de la Computación</p>
+                  <p>(En proceso)</p>
+                  <p>Estudiante avanzado en proceso de finalización de la carrera de Licenciatura en Ciencias de la Computación en la Facultad de Ciencias Exactas, Físicas y Naturales de la Universidad Nacional de San Juan.</p>
+                  <p>Formación profesional enfocada en la aplicación sistemática de conocimientos científicos y tecnológicos para la resolución de problemas en el ámbito de la computación. Capacitado para diseñar, desarrollar y mantener software, así como evaluar e implementar sistemas ya desarrollados.</p>
+                  <p>Dandomé sólidos conocimientos en teoría de la computación, lógica y complejidad computacional, así como en el diseño y desarrollo de sistemas de información y comunicación de datos. Además, cuento con experiencia en la integración de calidad de software, estableciendo metodologias ágiles y tradicionales en el desarrollo de software</p>
+                  <div class="badges-contenedor">
+                    <span class="badge text-bg-secondary">Software quality</span>
+                    <span class="badge text-bg-secondary">Python</span>
+                    <span class="badge text-bg-secondary">Java</span>
+                    <span class="badge text-bg-secondary">Distributed Systems</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Sector Contacto -->
+      <div class="tab-pane fade contact-page" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
