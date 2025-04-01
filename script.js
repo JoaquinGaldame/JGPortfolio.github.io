@@ -12,11 +12,62 @@ const textoEcommerce = `
 
   <p>Este desarrollo garantizó una solución eficiente y adaptable a las necesidades tanto de los clientes como de los administradores del sistema. Las imágenes que se ven acontinuación son parte de un proyecto duplicado para no exponer ilegalmente información confidencial</p>
 `;
+
+const textoSolutionsERP =`
+<p>Las soluciones <strong>ERP (Enterprise Resource Planning)</strong> son sistemas de planificación de recursos empresariales que integran y gestionan todos los procesos clave de una empresa en un solo software. Estas soluciones permiten centralizar información, optimizar operaciones y mejorar la toma de decisiones en áreas como finanzas, inventarios, ventas y producción. </p>
+<p>Tengo experiencia en desarrollo e integración de ERP He participado en el desarrollo e integración de mejoras en sistemas ERP en fases avanzadas, generando nuevas funcionalidades, optimizando el rendimiento y asegurando el mantenimiento del sistema. Mi trabajo ha incluido:</p>
+<ol>
+  <li><strong>Desarrollo</strong> de nuevas características y módulos. </li>
+  <li><strong>Integración</strong> de software con otros sistemas empresariales. </li>
+  <li><strong>Optimización</strong> y <strong>mantenimiento</strong> del sistema existente.</li>
+</ol>
+<h4>Integraciones destacadas</h4>
+<p>Desarrollé e integré diversos módulos clave en un sistema ERP en fases avanzadas, incluyendo algunos como:</p>
+<ol>
+  <li>Maestro de Zona de Ventas para la administración centralizada de sucursales.</li>
+  <li>Libros de Compra y Ventas (Cuentas Contables) permitiendo la gestión eficiente de registros contables.</li>
+  <li>Módulo de Cobranzas para el procesamiento de pagos de entidades externas.</li>
+</ol>
+<p>Estas mejoras permitieron optimizar la gestión empresarial y consolidar la información en un sistema robusto y escalable.</p>
+`
+
+const textoProjectMonitoring =`
+<p>Participé en el desarrollo desde cero de un sistema frontend para el <strong>Monitoreo de Gestión de Datos</strong> aplicado a proyectos, contratos y productos según las necesidades del cliente.</p>
+<p>Contando con la integración aparte de un Data Collector mobile. El sistema incluía:</p>
+<ol>
+  <li><strong>Visualización de datos y estadísticas:</strong> herramientas interactivas para el análisis de información.</li>
+  <li><strong>Reportes de Carga Dinámica:</strong> generación flexible de reportes en tiempo real.</li>
+  <li><strong>Maestro de Datos:</strong> creación, modificación y eliminación de registros clave.</li>
+  <li><strong>Dashboard general:</strong> panel de control intuitivo para el análisis de datos.</li>
+</ol>
+`
+const textoTPV =`
+<p><strong>Terminal Punto de Venta Web (TPV Web)</strong> es un sistema web integral para la gestión comercial que permite el procesamiento de pagos y facturación electrónica, administración de inventario y movimientos de stock, gestión contable y financiera, generación de reportes comerciales</p>
+<p>Desarrollé software para la aplicación integrando Front-end, Back-end y Bases de datos con SQL Server adaptable a diversos modelos de negocio, incluyendo</p>
+<ol>
+  <li>Estaciones de servicio y combustibles</li>
+  <li>Comercios minoristas</li>
+  <li>Empresas de servicios</li>
+</ol>
+<h4>Integraciones y funcionalidades destacadas:</h4>
+<ol>
+  <li><strong>Sistema de reportes avanzado:</strong> Se basa en listados detallados de comprobantes, resúmenes de cierre diario, movimientos de productos e inventario, análisis de ventas por períodos</li>
+  <li><strong>Módulo de pagos flexible:</strong> Integración con Mercado Pago y soporte para múltiples medios de pago (efectivo, transferencias, tarjetas)</li>
+  <li><strong>Formularios inteligentes:</strong> Diseño de interfaces optimizadas para procesos comerciales, validación en tiempo real de datos y flujos de trabajo personalizables</li>
+</ol>
+`
+
+const textoMigration =`
+<p><strong>Sistema Web</strong> para la gestión de negocios para una empresa de la ciudad de San Juan. Se trata de una migración de una aplicación web realizada en PHP. La idea principal es migrar todo el sistema con Frontend Vue3.js y Backend con Next.js. Actualmente se encuentra en proceso de migración.</p>
+`
+
+
 const Proyectos = [
-  { id:1, name:'Sistema E-commerce', image:'', description:textoEcommerce, tags:[ {name:'Angular 13'},{name:'.NET'},{name:'Tailwind CSS'},{name:'MongoDB'}]},
-  { id:2, name:'Terminal de Punto de Venta', image:'', description:'', tags:[ {name:'Angular 9'},{name:'.NET'},{name:'SCSS'},{name:'SQL Server'}]},
-  { id:3, name:'Sistema de Monitoreo de Gestión de Proyectos', image:'', description:'', tags:[ {name:'Angular 17'},{name:'.NET'},{name:'Tailwind CSS'},{name:'AWS Services'},{name:'SQL Server'}]},
-  { id:4, name:'Sistema de Soluciones ERP', image:'', description:'', tags:[ {name:'JavaScript'},{name:'SCSS'},{name:'.NET'},{name:'SQL Server'}]}
+  { id:1, name:'Sistema E-commerce', image:'', description: textoEcommerce, tags:[ {name:'Angular 13'},{name:'.NET'},{name:'Tailwind CSS'},{name:'MongoDB'}]},
+  { id:2, name:'Terminal de Punto de Venta', image:'', description: textoTPV, tags:[ {name:'Angular 9'},{name:'.NET'},{name:'SCSS'},{name:'SQL Server'}]},
+  { id:3, name:'Sistema de Monitoreo de Gestión de Proyectos', image:'', description: textoProjectMonitoring, tags:[ {name:'Angular 17'},{name:'.NET'},{name:'Tailwind CSS'},{name:'AWS Services'},{name:'SQL Server'}]},
+  { id:4, name:'Sistema de Soluciones ERP', image:'', description: textoSolutionsERP, tags:[ {name:'JavaScript'},{name:'SCSS'},{name:'.NET'},{name:'SQL Server'}]},
+  { id:5, name:'CoolSoft Migración', image:'', description: textoMigration, tags:[ {name:'Vue3.js'},{name:'Quasar Framework'},{name:'Nest.js'},{name:'DBeaver'}]}
 ]
 
 const ImagenSlider = [
@@ -24,7 +75,8 @@ const ImagenSlider = [
   { idProyecto: 2, imagenes: [{id:1 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo1.png"},{id:2 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo2.png"},{id:3 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo3.png"},{id:4 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo4.png"},{id:5 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo5.png"},{id:6 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo6.png"},
     {id:7 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo7.png"},{id:8 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo8.png"},{id:6 ,src:"imagenes/Proyectos/Proyecto-TPV/TPV-prototipo9.png"}]},
   { idProyecto: 3, imagenes: [{id:1 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/Foto-Prototipo-2.png"},{id:2 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/Foto-Prototipo-2.png"},{id:3 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/Foto-Prototipo-3.png"},{id:4 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/MaestroDatos-Ejemplo3.png"},{id:5 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/MaestroDatos-Ejemplo4.png"},{id:6 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/MaestroDatos-Ejemplo6.png"},{id:7 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/ReporteCarga-Ejemplo6.png"},{id:8 ,src:"imagenes/Proyectos/Proyecto-MonitoringManagement/DataCollector-Ejemplo3.png"}]},
-  { idProyecto: 4, imagenes: [{id:1 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-1.png"},{id:2 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-2.png"},{id:3 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-3.png"},{id:4 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-4.png"},{id:5 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-5.png"},{id:6 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-6.png"}]}
+  { idProyecto: 4, imagenes: [{id:1 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-1.png"},{id:2 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-2.png"},{id:3 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-3.png"},{id:4 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-4.png"},{id:5 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-5.png"},{id:6 ,src:"imagenes/Proyectos/Proyecto-SolucionesERP/solucionesERP-6.png"}]},
+  { idProyecto: 5, imagenes: [{id:1 ,src:"imagenes/Proyectos/Proyecto-Migration-Vue3/menu-1.png"},{id:2 ,src:"imagenes/Proyectos/Proyecto-Migration-Vue3/page-1.png"},{id:3 ,src:"imagenes/Proyectos/Proyecto-Migration-Vue3/page-2.png"},{id:4 ,src:"imagenes/Proyectos/Proyecto-Migration-Vue3/page-3.png"},{id:5 ,src:"imagenes/Proyectos/Proyecto-Migration-Vue3/page-4.png"},{id:6 ,src:"imagenes/Proyectos/Proyecto-Migration-Vue3/page-5.png"}]}
 ]
 
 const overlay = document.getElementById('fullscreenOverlay');
@@ -51,7 +103,7 @@ function closeFullscreen() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const projectModal = document.getElementById('projectModal');
-  projectModal.addEventListener('show.bs.modal', (event) => {
+  projectModal.addEventListener('shown.bs.modal', (event) => {
     const triggerElement = event.relatedTarget;
     // Leer el parámetro 'data-id'
     const projectId = triggerElement.getAttribute('data-id');
@@ -64,8 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
       case "1":
         document.getElementById('projectModalLabel').textContent = Proyectos[0].name;
         document.getElementById('modalProjectDescription').innerHTML = Proyectos[0].description;
-        document.getElementById('modalGithubLink').setAttribute('href', 'https://github.com/JoaquinGaldame/Project-Ecommerce');
-        //https://github.com/JoaquinGaldame/Project-Ecommerce
         badge_1.textContent = Proyectos[0].tags[0].name;
         badge_1.classList.remove('hidden-modal');
         badge_2.textContent = Proyectos[0].tags[1].name;
@@ -74,6 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
         badge_3.classList.remove('hidden-modal');
         badge_4.textContent = Proyectos[0].tags[3].name;
         badge_4.classList.remove('hidden-modal');
+        const githubBtn1 = document.getElementById('modalGithubLink');
+        if (githubBtn1) {
+          githubBtn1.href = 'https://github.com/JoaquinGaldame/Project-Ecommerce';
+          githubBtn1.style.display = 'inline-block'; // Asegurarse que es visible
+        }
         ImagenSlider[0].imagenes.forEach((item, index) =>{
           let image= document.getElementById(`img-carousel-${index+1}`)
           image.src = item.src
@@ -85,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case "2":
         document.getElementById('projectModalLabel').textContent = Proyectos[1].name;
-        document.getElementById('modalProjectDescription').textContent = Proyectos[1].description;
+        document.getElementById('modalProjectDescription').innerHTML = Proyectos[1].description;
         badge_1.textContent = Proyectos[1].tags[0].name;
         badge_1.classList.remove('hidden-modal');
         badge_2.textContent = Proyectos[1].tags[1].name;
@@ -94,6 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
         badge_3.classList.remove('hidden-modal');
         badge_4.textContent = Proyectos[1].tags[3].name;
         badge_4.classList.remove('hidden-modal');
+        const githubBtn2 = document.getElementById('modalGithubLink');
+        if (githubBtn2) {
+          githubBtn2.style.display = 'none';
+        }
+        console.log('esto tiene ImagenSlider  1 ' + JSON.stringify(ImagenSlider[1].imagenes))
         ImagenSlider[1].imagenes.forEach((item, index) =>{
           let image= document.getElementById(`img-carousel-${index+1}`)
           image.src = item.src
@@ -105,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case "3":
         document.getElementById('projectModalLabel').textContent = Proyectos[2].name;
-        document.getElementById('modalProjectDescription').textContent = Proyectos[2].description;
+        document.getElementById('modalProjectDescription').innerHTML = Proyectos[2].description;
         badge_1.textContent = Proyectos[2].tags[0].name;
         badge_1.classList.remove('hidden-modal');
         badge_2.textContent = Proyectos[2].tags[1].name;
@@ -116,6 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
         badge_4.classList.remove('hidden-modal');
         badge_5.textContent = Proyectos[2].tags[4].name;
         badge_5.classList.remove('hidden-modal');
+        const githubBtn3 = document.getElementById('modalGithubLink');
+        if (githubBtn3) {
+          githubBtn3.style.display = 'none';
+        }
         ImagenSlider[2].imagenes.forEach((item, index) =>{
           let image= document.getElementById(`img-carousel-${index+1}`)
           image.src = item.src
@@ -127,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case "4":
         document.getElementById('projectModalLabel').textContent = Proyectos[3].name;
-        document.getElementById('modalProjectDescription').textContent = Proyectos[3].description;
+        document.getElementById('modalProjectDescription').innerHTML = Proyectos[3].description;
         badge_1.textContent = Proyectos[3].tags[0].name;
         badge_1.classList.remove('hidden-modal');
         badge_2.textContent = Proyectos[3].tags[1].name;
@@ -136,7 +200,35 @@ document.addEventListener('DOMContentLoaded', () => {
         badge_3.classList.remove('hidden-modal');
         badge_4.textContent = Proyectos[3].tags[3].name;
         badge_4.classList.remove('hidden-modal');
+        const githubBtn4 = document.getElementById('modalGithubLink');
+        if (githubBtn4) {
+          githubBtn4.style.display = 'none';
+        }
         ImagenSlider[3].imagenes.forEach((item, index) =>{
+          let image= document.getElementById(`img-carousel-${index+1}`)
+          image.src = item.src
+          image.addEventListener('click', () => {
+            overlay.classList.add('active');
+            overlayImage.src = image.src;
+          });
+        })
+        break;
+      case "5":
+        document.getElementById('projectModalLabel').textContent = Proyectos[4].name;
+        document.getElementById('modalProjectDescription').innerHTML = Proyectos[4].description;
+        badge_1.textContent = Proyectos[4].tags[0].name;
+        badge_1.classList.remove('hidden-modal');
+        badge_2.textContent = Proyectos[4].tags[1].name;
+        badge_2.classList.remove('hidden-modal');
+        badge_3.textContent = Proyectos[4].tags[2].name;
+        badge_3.classList.remove('hidden-modal');
+        badge_4.textContent = Proyectos[4].tags[3].name;
+        badge_4.classList.remove('hidden-modal');
+        const githubBtn5 = document.getElementById('modalGithubLink');
+        if (githubBtn5) {
+          githubBtn5.style.display = 'none';
+        }
+        ImagenSlider[4].imagenes.forEach((item, index) =>{
           let image= document.getElementById(`img-carousel-${index+1}`)
           image.src = item.src
           image.addEventListener('click', () => {
@@ -158,4 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutmeTab.show();
   });
 });
+
+
+
+
 
